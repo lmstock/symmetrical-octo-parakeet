@@ -10,8 +10,6 @@ let total = 0
 let correct = 0
 
 
-
-
 // GET RANDOM INT
 function rand_int(min, max) {
   return Math.floor(
@@ -28,6 +26,12 @@ function get_question(x) {
 // Display question
 function display_question(correct, total) {
 
+  const ans_btn = document.getElementById('answer_button');
+
+  ans_btn.addEventListener('click', function onClick() {
+    ans.style.color = 'green';
+  });
+
   // get question
   question_index = get_question(all_questions)
   let question_definition = questions[question_index].definition
@@ -35,8 +39,11 @@ function display_question(correct, total) {
 
   // Display Question 
   document.getElementById("definition").innerHTML = question_definition
+  const ans = document.getElementById('word');
+  ans.style.color = "rgb(223, 223, 247)";
   document.getElementById("word").innerHTML = question_word
 }
+
 
   function correct_score() {
     correct = correct + 1
@@ -112,5 +119,5 @@ function setup_welcome() {
   }
 
 
-
+ 
 
