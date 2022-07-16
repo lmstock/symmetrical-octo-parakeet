@@ -224,7 +224,7 @@ const questions = [
 },
 {
 "id": 4.45,
-"definition": ""copy in and out" utility",
+"definition": "copy_in_out_utility utility",
 "word": "cpio",
 },
 {
